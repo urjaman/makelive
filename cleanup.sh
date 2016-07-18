@@ -1,5 +1,5 @@
 #!/bin/sh
-. paths
+. ./paths
 cd $BASEPATH/$GENNAME
 rm -rf var/db/pkg/*
 rm -rf var/cache/*

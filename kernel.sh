@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-. paths
+. ./paths
 cd $BASENAME
 rm -f tinygentoo-boot/vmlinuz
 if [ ! -d kernel ]; then

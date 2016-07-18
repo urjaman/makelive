@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-. paths
+. ./paths
 cd $BASEPATH
 rm -rf iso
 mkdir iso

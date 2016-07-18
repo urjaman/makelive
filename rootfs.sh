@@ -1,5 +1,5 @@
 #!/bin/sh
-. paths
+. ./paths
 cd $BASEPATH
 rm -rf $GENNAME
 mkdir $GENNAME
