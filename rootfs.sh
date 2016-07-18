@@ -17,16 +17,14 @@ mknod -m 444 urandom c 1 9
 mknod -m 666 tty c 5 0
 cd $BASEPATH
 set -e
+# things for other people, then for me :P
+EXTRATHINGS="man man-pages vim fbset usbutils sshfs"
 # base dev-system-ish...
-emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vak @system dhcpcd links make sys-devel/gcc sys-devel/binutils dev-vcs/git dev-vcs/subversion hwids
-# things for other people, well, mostly
-emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk man man-pages vim
-# things for me ;p
-emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk fbset usbutils
-# the flashrom(s) :P
-emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk flashrom-git flashrom-urjaman
-# The AVR stuff (for serprog work), manually forced ordering to link libusb with avrdude etc
-emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk avrdude
+emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vak @system dhcpcd links make sys-devel/gcc sys-devel/binutils dev-vcs/git dev-vcs/subversion hwids $EXTRATHINGS
+#pre-load the libusbs before avrdude
+emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk libusb-compat libusb
+# the flashrom(s) :P (and avrdude since trying to reduce to number of emerges)
+emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vak flashrom-git flashrom-urjaman avrdude
 # These need manually forced ordering (also, they need to be installed in the host, but they are..) (=ROOT support for these, not really existant :P)
 # And they were made with crossdev --target avr --init-only or something like that, look in the crossdev help.
 emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk cross-avr/binutils
