@@ -15,6 +15,6 @@ make menuconfig
 make -j8 bzImage modules
 cd ..
 mkdir -p boot
-cp kernel/arch/boot/x86/bzImage boot/vmlinuz
+cp kernel/arch/x86/boot/bzImage boot/vmlinuz
 cp kernel/.config kernel-cfg
 
