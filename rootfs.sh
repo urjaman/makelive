@@ -24,7 +24,7 @@ emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk man man-pages
 # things for me ;p
 emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk fbset usbutils
 # the flashrom(s) :P
-emerge --config-root=$BASEPATH/-cfg/ --root=$BASEPATH/$GENNAME/ -vk flashrom-git flashrom-urjaman
+emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk flashrom-git flashrom-urjaman
 # The AVR stuff (for serprog work), manually forced ordering to link libusb with avrdude etc
 emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vk avrdude
 # These need manually forced ordering (also, they need to be installed in the host, but they are..) (=ROOT support for these, not really existant :P)
