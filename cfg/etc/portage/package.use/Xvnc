@@ -1,0 +1,75 @@
+# This file has become all things X support, but without making X support
+# mandatory in the whole system... so stuff you'd want without X (eg. links)
+# will not have X support.
+net-misc/tightvnc server
+net-misc/tigervnc server -xorgmodule
+x11-libs/libXfont truetype
+media-fonts/font-misc-misc X
+media-fonts/font-cursor-misc X
+media-fonts/liberation-fonts X
+media-libs/imlib2 gif jpeg png tiff X
+x11-terms/xterm truetype
+media-libs/giflib X
+media-libs/libpng apng
+media-libs/freetype X
+x11-libs/libast imlib
+x11-terms/eterm escreen
+net-print/cups X
+app-text/ghostscript-gpl X cups
+media-fonts/urw-fonts X
+dev-lang/python sqlite
+x11-libs/pango X
+app-crypt/pinentry gtk
+www-client/seamonkey -chatzilla system-jpeg system-sqlite -gstreamer custom-optimization custom-cflags
+x11-libs/cairo X
+dev-db/sqlite secure-delete
+x11-libs/wxGTK gnome opengl webkit tiff
+dev-libs/boost context python
+sci-electronics/kicad github webkit
+net-libs/webkit-gtk -geoloc -gstreamer -introspection -opengl -webgl -egl
+net-libs/glib-networking -gnome
+media-libs/harfbuzz -introspection icu
+x11-libs/fltk -xinerama
+x11-wm/dwm savedconfig
+>=x11-libs/gdk-pixbuf-2.32.3 X
+x11-libs/gtk+:3 X
+media-fonts/terminus-font X
+>=dev-python/wxpython-3.0.2.0 opengl
+
+media-fonts/font-ibm-type1 X
+media-fonts/font-dec-misc X
+media-fonts/font-misc-meltho X
+media-fonts/font-isas-misc X
+media-fonts/font-bh-lucidatypewriter-100dpi X
+media-fonts/font-bh-75dpi X
+media-fonts/font-sun-misc X
+media-fonts/font-jis-misc X
+media-fonts/font-mutt-misc X
+media-fonts/font-adobe-utopia-75dpi X
+media-fonts/font-bitstream-100dpi X
+media-fonts/font-screen-cyrillic X
+media-fonts/font-adobe-75dpi X
+media-fonts/font-daewoo-misc X
+media-fonts/font-winitzki-cyrillic X
+media-fonts/font-sony-misc X
+media-fonts/font-misc-ethiopic X
+media-fonts/font-micro-misc X
+media-fonts/font-cronyx-cyrillic X
+media-fonts/font-schumacher-misc X
+media-fonts/font-bitstream-type1 X
+media-fonts/font-bh-ttf X
+media-fonts/font-bh-type1 X
+media-fonts/font-adobe-utopia-100dpi X
+media-fonts/font-bh-lucidatypewriter-75dpi X
+media-fonts/font-bitstream-speedo X
+media-fonts/font-xfree86-type1 X
+media-fonts/font-bh-100dpi X
+media-fonts/font-adobe-utopia-type1 X
+media-fonts/font-arabic-misc X
+media-fonts/font-misc-cyrillic X
+media-fonts/font-bitstream-75dpi X
+media-fonts/font-adobe-100dpi X
+
+
+# >=dev-libs/libxml2-2.9.4 python
+

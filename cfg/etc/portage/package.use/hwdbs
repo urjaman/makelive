@@ -1,0 +1,2 @@
+sys-apps/hwids -udev
+sys-fs/eudev -hwdb

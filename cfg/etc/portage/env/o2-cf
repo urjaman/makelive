@@ -1,0 +1,4 @@
+CFLAGS="${CFLAGS} -O2 -fomit-frame-pointer"
+CXXFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"

@@ -1,0 +1,8 @@
+=sys-apps/flashrom-git-9999 **
+=sys-apps/flashrom-urjaman-9999 **
+dev-vcs/git ~x86
+
+
+dev-lang/perl ~x86
+virtual/perl-* ~x86
+perl-*/* ~x86

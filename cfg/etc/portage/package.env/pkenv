@@ -1,0 +1,25 @@
+dev-libs/openssl fast-cflags
+net-misc/openssh fast-cflags
+sys-fs/fuse fast-cflags
+sys-fs/sshfs fast-cflags
+dev-lang/python fast-cflags
+sys-apps/portage fast-cflags
+app-arch/bzip2 fast-cflags
+sys-libs/zlib fast-cflags
+app-shells/bash fast-cflags
+sys-libs/glibc o2-cf no-a-filter
+www-client/seamonkey fast-cflags
+media-libs/libpng fast-cflags
+media-libs/libjpeg-turbo fast-cflags
+media-libs/imlib2 fast-cflags
+media-libs/mesa fast-cflags
+x11-drivers/xf86-video-mach64 fast-cflags
+x11-base/xorg-server fast-cflags
+x11-libs/libX11 fast-cflags
+x11-libs/libxcb fast-cflags
+x11-libs/libXaw fast-cflags
+x11-libs/libXft fast-cflags
+x11-libs/libXmu fast-cflags
+x11-libs/libXrender fast-cflags
+x11-libs/libXt fast-cflags
+cross-avr/* no-a-filter

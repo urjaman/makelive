@@ -1,0 +1,2 @@
+dev-vcs/subversion -dso perl
+dev-vcs/git -gpg -perl -python subversion perl

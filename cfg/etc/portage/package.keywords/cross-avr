@@ -1,0 +1,4 @@
+cross-avr/binutils * ~* -x86 -~x86
+cross-avr/gcc * ~* -x86 -~x86
+cross-avr/avr-libc * ~* -x86 -~x86
+cross-avr/gdb * ~* -x86 -~x86

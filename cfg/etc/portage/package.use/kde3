@@ -1,0 +1,7 @@
+kde-base/kdelibs:3.5 legacyssl alsa
+>=net-dns/avahi-0.6.31-r11 qt3 dbus
+media-video/ffmpeg alsa X aac aacplus amr cpudetection faac mp3 vorbis
+media-plugins/libvisual-plugins alsa
+media-sound/amarok -amazon visualization
+media-libs/xine-lib aac mad vorbis dvb
+
