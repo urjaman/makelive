@@ -23,3 +23,6 @@ x11-libs/libXmu fast-cflags
 x11-libs/libXrender fast-cflags
 x11-libs/libXt fast-cflags
 cross-avr/* no-a-filter
+sys-devel/gcc no-a-filter
+sys-devel/binutils no-a-filter
+

@@ -18,7 +18,7 @@ mknod -m 666 tty c 5 0
 cd $BASEPATH
 set -e
 # things for other people, then for me :P
-EXTRATHINGS="man man-pages vim fbset usbutils sshfs"
+EXTRATHINGS="man man-pages vim fbset usbutils sshfs nano strace sys-devel/gdb weechat app-misc/screen gawk"
 # base dev-system-ish...
 emerge --config-root=$BASEPATH/cfg/ --root=$BASEPATH/$GENNAME/ -vak @system dhcpcd links make sys-devel/gcc sys-devel/binutils dev-vcs/git dev-vcs/subversion hwids $EXTRATHINGS
 #pre-load the libusbs before avrdude
@@ -39,7 +39,15 @@ echo hostname="$GENNAME" > $GENNAME/etc/conf.d/hostname
 chroot $GENNAME rc-update del keymaps boot
 chroot $GENNAME rc-update del fsck boot
 chroot $GENNAME rc-update del swap boot
-rm $GENNAME/etc/fstab
-echo >> $GENNAME/etc/fstab
+chroot $GENNAME rc-update del hwclock boot
+echo > $GENNAME/etc/fstab
 echo "tmpfs / tmpfs defaults 0 0" >> $GENNAME/etc/fstab
 echo >> $GENNAME/etc/fstab
+echo "UTC" > $GENNAME/etc/timezone
+cp -f $GENNAME/usr/share/zoneinfo/UTC $GENNAME/etc/localtime
+echo "en_US.UTF-8 UTF-8" > $GENNAME/etc/locale.gen
+echo 'LANG="en_US.utf8"' > $GENNAME/etc/env.d/02locale
+touch $GENNAME/usr/share/locale/locale.alias
+chroot $GENNAME locale-gen
+ROOT=$BASEPATH/$GENNAME env-update
+
