@@ -17,7 +17,7 @@ echo "location = /usr/local/portage" >> /etc/portage/repos.conf/local.conf
 echo "masters = gentoo" >> /etc/portage/repos.conf/local.conf
 echo "auto-sync = no" >> /etc/portage/repos.conf/local.conf
 . ./paths
-emerge -va --noreplace sys-boot/grub sys-devel/crossdev sys-kernel/genkernel dev-libs/libisoburn
+emerge -va --noreplace sys-boot/grub sys-devel/crossdev sys-kernel/genkernel dev-libs/libisoburn squashfs-tools
 crossdev --target avr --init-target
 emerge -va --noreplace cross-avr/binutils
 USE="-vtv -openmp" emerge -va cross-avr/gcc
@@ -27,3 +27,5 @@ PORTAGE_CONFIGROOT=$BASEPATH/cfg/ crossdev --target avr --init-target
 #adjust the distfiles and package dirs in cfg/etc/portage/make.conf or whatever if you like
 mkdir -p /usr/portage-distfiles
 mkdir -p /usr/portage-packages-i486
+cp cfg/etc/portage/package.use/ssl /etc/portage/package.use/
+
